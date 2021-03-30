@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: trivy-scanner
+  name: trivy-scanner
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trivy-scanner
+  template:
+    metadata:
+      labels:
+        app: trivy-scanner
+    spec:
+      serviceAccountName: trivy-scanner
+      containers:
+      - image: dustise/trivy-scanner:v0.0.1
+        imagePullPolicy: IfNotPresent
+        name: trivy-scanner
+        volumeMounts:
+        - mountPath: /etc/trivy-scanner/
+          name: operator-config
+      volumes:
+      - configMap:
+          name: trivy-scanner-config
+        name: operator-config

@@ -1,0 +1,5 @@
+configVersion: v1
+schedule:
+- name: "every 10 min"
+  crontab: "*/10 * * * *"
+  allowFailure: true
