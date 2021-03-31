@@ -22,11 +22,6 @@ Every 5 minutes, the script will be executed, It will get image list from all na
 ~~~text
 # HELP so_vulnerabilities so_vulnerabilities
 # TYPE so_vulnerabilities gauge
-so_vulnerabilities{hook="trivy-scanner.py",image="dustise/sleep:v0.9.6",severity="CRITICAL"} 1
-so_vulnerabilities{hook="trivy-scanner.py",image="dustise/sleep:v0.9.6",severity="HIGH"} 11
-so_vulnerabilities{hook="trivy-scanner.py",image="dustise/sleep:v0.9.6",severity="LOW"} 2
-so_vulnerabilities{hook="trivy-scanner.py",image="dustise/sleep:v0.9.6",severity="MEDIUM"} 9
-so_vulnerabilities{hook="trivy-scanner.py",image="dustise/sleep:v0.9.6",severity="UNKNOWN"} 0
 so_vulnerabilities{hook="trivy-scanner.py",image="nginx:1.19.6-alpine",severity="CRITICAL"} 0
 so_vulnerabilities{hook="trivy-scanner.py",image="nginx:1.19.6-alpine",severity="HIGH"} 4
 so_vulnerabilities{hook="trivy-scanner.py",image="nginx:1.19.6-alpine",severity="LOW"} 2
