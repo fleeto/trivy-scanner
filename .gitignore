@@ -1,6 +1,6 @@
 # Customize
-deploy/chart/validating-certs/
 deploy/docker/*.py
+deploy/docker/trivy
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

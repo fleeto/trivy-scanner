@@ -1,5 +1,5 @@
 configVersion: v1
 schedule:
-- name: "every 10 min"
-  crontab: "*/10 * * * *"
+- name: "scan images each 5 min"
+  crontab: "*/5 * * * *"
   allowFailure: true

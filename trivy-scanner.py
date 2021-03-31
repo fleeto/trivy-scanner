@@ -61,11 +61,12 @@ with open(METRIC_FILE, "w") as metric_file:
             metric = {
                 "name": "so_vulnerabilities",
                 "action": "set",
+                "set": vul_list[image_name][severity],
                 "value": vul_list[image_name][severity],
                 "labels": {
                     "image": image_name,
                     "severity": severity
                 }
             }
-            line = json.dumps(metric)
+            line = json.dumps(metric, separators=(',', ':'))
             metric_file.write(line + "\n")
