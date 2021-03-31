@@ -13,10 +13,16 @@ spec:
     metadata:
       labels:
         app: trivy-scanner
+      annotations:
+        prometheus.io/port: "9115"
+        prometheus.io/scrape: "true"
     spec:
       serviceAccountName: trivy-scanner
       containers:
-      - image: dustise/trivy-scanner:v0.0.1
+      - env:
+        - name: GITHUB_TOKEN
+          value: MY-TOKEN-FROM-GITHUB
+        image: MY-IMAGE-TAG
         imagePullPolicy: IfNotPresent
         name: trivy-scanner
         volumeMounts:

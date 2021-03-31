@@ -6,4 +6,5 @@ ENV TRIVY_CACHE_DIR=/data/trivy \
 RUN apk --no-cache add python3=3.8.8-r0
 COPY trivy-scanner.py /hooks
 COPY trivy /usr/local/bin
+EXPOSE 9115
 VOLUME [ "/data/trivy", "/data/cache" ]
