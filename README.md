@@ -1,4 +1,4 @@
-# Copy labels to pods from nodes
+# Monitoring vulnerabilities in docker images
 
 Built with [Shell Operator](https://github.com/flant/shell-operator)
 
