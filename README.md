@@ -19,6 +19,10 @@ Set github token and image tag in `deploy/kubernetes/deployment.yaml`, then `kub
 
 Every 5 minutes, the script will be executed, It will get image list from all namespaces with the label `trivy=true`, and then scan this images with trivy, finally we will get metrics on `http://[pod-ip]:9115/metrics` like this:
 
+```bash
+kubectl label namespaces guestbook-demo trivy=true
+```
+
 ~~~text
 # HELP so_vulnerabilities so_vulnerabilities
 # TYPE so_vulnerabilities gauge

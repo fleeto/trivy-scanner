@@ -1,0 +1,7 @@
+namespace: shell-operator
+
+resources:
+  - rbac.yaml
+  - config.yaml
+  - deployment.yaml
+  - service.yaml

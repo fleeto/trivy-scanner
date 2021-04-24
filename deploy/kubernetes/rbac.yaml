@@ -3,7 +3,9 @@ kind: ClusterRole
 metadata:
   name: trivy-scanner
 rules:
-- resources:
+- apiGroups:
+   - ""
+  resources:
   - pods
   - namespaces
   verbs:

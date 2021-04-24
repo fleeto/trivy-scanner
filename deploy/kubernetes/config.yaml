@@ -1,5 +1,11 @@
-configVersion: v1
-schedule:
-- name: "scan images each 5 min"
-  crontab: "*/5 * * * *"
-  allowFailure: true
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: trivy-scanner-config
+data:
+  config.yaml: |-
+    configVersion: v1
+    schedule:
+    - name: "scan images each 5 min"
+      crontab: "*/5 * * * *"
+      allowFailure: true
