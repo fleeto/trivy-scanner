@@ -6,14 +6,16 @@ Built with [Shell Operator](https://github.com/flant/shell-operator)
 
 ### Docker Image
 
-~~~command
+```bash
 $ ./build.image.sh [repository:tag]
 ...
-~~~
+```
 
 ## Deploy
 
-Set github token and image tag in `deploy/kubernetes/deployment.yaml`, then `kubectl apply -f deploy/kubernetes`.
+```bash
+kubectl apply -k deploy/kubernetes/
+```
 
 ## Usage
 
@@ -21,6 +23,8 @@ Every 5 minutes, the script will be executed, It will get image list from all na
 
 ```bash
 kubectl label namespaces guestbook-demo trivy=true
+
+curl -s http://10.43.179.39:9115/metrics | grep so_vulnerabilities
 ```
 
 ~~~text

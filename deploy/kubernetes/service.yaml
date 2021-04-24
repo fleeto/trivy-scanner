@@ -3,6 +3,9 @@ kind: Service
 metadata:
   name: trivy-scanner
 spec:
-  clusterIP: None
   selector:
     app: trivy-scanner
+  ports:
+    - protocol: TCP
+      port: 9115
+      targetPort: 9115

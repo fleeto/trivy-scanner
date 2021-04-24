@@ -18,19 +18,26 @@ spec:
         prometheus.io/scrape: "true"
     spec:
       serviceAccountName: trivy-scanner
+#      imagePullSecrets:
+#      - name: regcred
       containers:
-      - env:
-        - name: GITHUB_TOKEN
-          value: MY-TOKEN-FROM-GITHUB
-        image: MY-IMAGE-TAG
-        imagePullPolicy: IfNotPresent
-        name: trivy-scanner
+      - name: trivy-scanner
+        image: devopstales/trivy-scanner:2.0
+        imagePullPolicy: Always
+#        env:
+#        - name: GITHUB_TOKEN
+#          value: MY-TOKEN-FROM-GITHUB
         volumeMounts:
-        - mountPath: /etc/trivy-scanner/
-          name: operator-config
+        - name: operator-config
+          mountPath: /etc/trivy-scanner/
+        - name: cache
+          mountPath: "/home/kube-trivy-exporter/.cache/trivy"
         ports:
           - containerPort: 9115
       volumes:
       - configMap:
           name: trivy-scanner-config
         name: operator-config
+      - name: cache
+        persistentVolumeClaim:
+            claimName: "trivy-cache"
