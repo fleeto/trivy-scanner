@@ -28,6 +28,8 @@ spec:
         volumeMounts:
         - mountPath: /etc/trivy-scanner/
           name: operator-config
+        ports:
+          - containerPort: 9115
       volumes:
       - configMap:
           name: trivy-scanner-config
