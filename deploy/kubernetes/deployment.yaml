@@ -31,7 +31,7 @@ spec:
         - name: operator-config
           mountPath: /etc/trivy-scanner/
         - name: cache
-          mountPath: "/home/kube-trivy-exporter/.cache/trivy"
+          mountPath: "/home/kube-trivy-exporter/trivy-cache"
         ports:
           - containerPort: 9115
       volumes:

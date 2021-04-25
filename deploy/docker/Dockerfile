@@ -1,6 +1,6 @@
 FROM flant/shell-operator:v1.0.0-rc.2
 
-ENV TRIVY_CACHE_DIR=/home/kube-trivy-exporter/.cache/trivy \
+ENV TRIVY_CACHE_DIR=/home/kube-trivy-exporter/trivy-cache \
     TRIVY_QUIET=true \
     NS_LABEL="trivy=true"
 
