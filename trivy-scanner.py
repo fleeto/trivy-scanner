@@ -42,8 +42,6 @@ for ns in ns_list["items"]:
             continue
         print("Scanning " + image_name)
         TRIVY = ["trivy", "-q", "i", "-f", "json", image_name]
-        #trivy_result = subprocess.check_output(TRIVY).decode("UTF-8")
-        #print(trivy_result)
         trivy_result = json.loads(
             subprocess.check_output(TRIVY).decode("UTF-8")
         )
