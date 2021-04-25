@@ -22,7 +22,7 @@ spec:
 #      - name: regcred
       containers:
       - name: trivy-scanner
-        image: devopstales/trivy-scanner:2.0
+        image: devopstales/trivy-scanner:2.1
         imagePullPolicy: Always
 #        env:
 #        - name: GITHUB_TOKEN
