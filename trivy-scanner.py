@@ -11,7 +11,7 @@ parser.add_argument('--config', action='store_true')
 args = parser.parse_args()
 CONFIG_FILE = os.getenv("CONFIG_FILE", "/etc/trivy-scanner/config.yaml")
 CONTEXT_FILE = os.getenv("BINDING_CONTEXT_PATH")
-METRIC_FILE = os.getenv("METRICS_PATH", "/tmp/metrics")
+METRIC_FILE = os.getenv("METRICS_PATH")
 NS_LABEL = os.getenv("NS_LABEL", "trivy=true")
 
 if args.config:
