@@ -6,6 +6,6 @@ data:
   config.yaml: |-
     configVersion: v1
     schedule:
-    - name: "scan images each 5 min"
+    - name: scan
       crontab: "*/5 * * * *"
       allowFailure: true

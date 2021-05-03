@@ -25,6 +25,8 @@ Every 5 minutes, the script will be executed, It will get image list from all na
 kubectl label namespaces guestbook-demo trivy=true
 
 curl -s http://10.43.179.39:9115/metrics | grep so_vulnerabilities
+
+kubectl create secret generic config-json --from-file=config-json=./config.json
 ```
 
 ~~~text
