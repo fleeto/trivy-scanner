@@ -2,6 +2,8 @@ namespace: shell-operator
 
 resources:
   - rbac.yaml
+  - pvc.yaml
   - config.yaml
   - deployment.yaml
   - service.yaml
+  - servicemonitor.yaml
