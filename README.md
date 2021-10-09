@@ -1,6 +1,12 @@
+|![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/156px-Warning.svg.png) | This project is no longer supported.
+|---|---|
 # Monitoring vulnerabilities in docker images
 
 Built with [Shell Operator](https://github.com/flant/shell-operator)
+
+## :warning: Deprecation and Archive Notice
+
+This chart is Deprecated and do not maintained eny more.
 
 ## Build & Deploy
 
