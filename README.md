@@ -6,8 +6,7 @@ Built with [Shell Operator](https://github.com/flant/shell-operator)
 
 ## :warning: Deprecation and Archive Notice
 
-This chart is Deprecated and do not maintained eny more.
-
+This chart is Deprecated and do not maintained eny more. Use [trivy-operator](https://github.com/devopstales/trivy-operator) instead.
 ## Build & Deploy
 
 ### Docker Image
